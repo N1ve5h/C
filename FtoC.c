@@ -16,12 +16,12 @@ void main() {
     lower = 0;   /* lower limit of temperature scale */
     upper = 300; /* upper limit */
     step = 10;   /* step size */
-    fahr = lower;
+    fahr = upper;
     printf("F \t C\n");
-    while (fahr <= upper)
+    while (fahr >= lower)
     {
         celsius = (5.0/9.0) * (fahr-32.0);
         printf("%3.0f\t%6.2f\n", fahr, celsius);
-        fahr = fahr + step;
+        fahr = fahr - step;
     }
 }
